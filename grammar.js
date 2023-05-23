@@ -476,6 +476,7 @@ module.exports = grammar({
       'volatile',
       'restrict',
       '_Atomic',
+      '_Noreturn',
     ),
 
     _type_specifier: $ => choice(
@@ -736,6 +737,7 @@ module.exports = grammar({
       $.cast_expression,
       $.pointer_expression,
       $.sizeof_expression,
+      $.generic_expression,
       $.subscript_expression,
       $.call_expression,
       $.field_expression,
@@ -863,6 +865,15 @@ module.exports = grammar({
         field('value', $._expression),
         seq('(', field('type', $.type_descriptor), ')'),
       ),
+    )),
+
+    generic_expression: $ => prec(PREC.CALL, seq(
+      '_Generic',
+      '(',
+      $._expression,
+      ',',
+      commaSep1(seq($._type_specifier, ':', $._expression)),
+      ')',
     )),
 
     subscript_expression: $ => prec(PREC.SUBSCRIPT, seq(
