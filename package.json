@@ -3,6 +3,7 @@
   "version": "0.20.8",
   "description": "C grammar for node-tree-sitter",
   "main": "bindings/node",
+  "types": "bindings/node",
   "keywords": [
     "parser",
     "lexer",
@@ -18,7 +19,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "nan": "^2.18.0"
+    "node-addon-api": "^7.1.0"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
