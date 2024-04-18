@@ -33,7 +33,7 @@ const PREC = {
 };
 
 module.exports = grammar({
-  name: 'c',
+  name: 'idac',
 
   extras: $ => [
     /\s|\\\r?\n/,
@@ -620,6 +620,7 @@ module.exports = grammar({
       'bool',
       'char',
       'int',
+      '__int',
       'float',
       'double',
       'void',
@@ -1254,7 +1255,7 @@ module.exports = grammar({
             hexDigits,
           )),
         )),
-        /[uUlLwWfFbBdD]*/,
+        /([uUlLwWfFbBdD]*|i64)/,
       ));
     },
 

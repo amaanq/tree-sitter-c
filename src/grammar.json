@@ -1,5 +1,6 @@
 {
-  "name": "c",
+  "name": "idac",
+  "inherits": null,
   "word": "identifier",
   "rules": {
     "translation_unit": {
@@ -4853,6 +4854,10 @@
           },
           {
             "type": "STRING",
+            "value": "__int"
+          },
+          {
+            "type": "STRING",
             "value": "float"
           },
           {
@@ -9083,7 +9088,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "[uUlLwWfFbBdD]*"
+            "value": "([uUlLwWfFbBdD]*|i64)"
           }
         ]
       }

@@ -1,4 +1,4 @@
-# tree-sitter-c
+# tree-sitter-idac
 
 [![CI][ci]](https://github.com/tree-sitter/tree-sitter-c/actions/workflows/ci.yml)
 [![discord][discord]](https://discord.gg/w7nTvsVJhm)
